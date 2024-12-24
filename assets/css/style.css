@@ -90,6 +90,8 @@ body {
 
 .navbar-links a {
     margin-right: 20px;
+    color: #1F1F1F;
+
 }
 
 /* Button styling */
@@ -157,8 +159,8 @@ body {
 .gr1 {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
+/*     grid-template-rows: 1fr;
+ */    grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
 
@@ -204,34 +206,9 @@ body {
 
 .gr3 {
     display: grid;
-    grid-template-columns: repeat(1f);
     gap: 5px;
 }
 
-/* Responsive Grids */
-@media screen and (max-width: 768px) {
-    .gr1 {
-        grid-template-columns: 1fr;
-        /* Stack columns for smaller screens */
-    }
-
-    .gr2 {
-        grid-template-columns: 1fr;
-        /* Stack columns for smaller screens */
-    }
-    .gr3 {
-        grid-template-columns: 1fr;
-        /* Stack columns for smaller screens */
-    }
-    .grid {
-        grid-template-columns: 1fr;
-        /* Stack columns for smaller screens */
-    }
-    .row{
-        display: block;
-        text-align: center;
-    }
-}/* Initially hide the additional content by setting opacity to 0 */
 .more-details {
     opacity: 0;
     transition: opacity 0.5s ease-in-out; /* Smooth fade-in/out effect */
@@ -336,7 +313,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
-    transform: translateX(50deg);
     margin-bottom: 15px;
     transform: translate(0, 70px);
     width: 70%;
@@ -375,10 +351,102 @@ body {
     .footer a:hover{
         color: green;
     }
-    @media (max-width: 768px) {
-        .footer{
-            grid-template-columns: 1fr;
+  
 
-        }
+    /* Responsive Grids */
+@media screen and  (max-width: 765px)  {
+    .gr1 {
+        display:block;
+        /* Stack columns for smaller screens */
+    }
+
+    .gr2 {
+        display:block;
+        /* Stack columns for smaller screens */
+    }
+    .gr3 {
+        display:block;
+        /* Stack columns for smaller screens */
+    }
+    .grid {
+        display:block;
+        /* Stack columns for smaller screens */
+    }
+    .row{
+        display: block;
+        text-align: center;
+    }
+    .cart-cards{
+        display: block !important;
+        position: unset;
+        padding: 5px;
+    }
+    .cart-container{
+        display: block !important;
+        position: unset;
 
     }
+    .cart-card{
+        width:auto !important;
+        width: 100%;
+    }
+    .footer{
+        display:block;
+    }
+    .input-box{
+        display: block;
+        padding: 5px;
+        width: 100%;
+    }
+    .input-box input{
+        margin:5px auto ;
+        border: 1px solid #1F1F1F;
+/*         padding: 5px;
+ */    }
+
+}/* Initially hide the additional content by setting opacity to 0 */
+@media screen and  (max-width: 900px)  {
+    .gr1 {
+        grid-template-columns: 1fr 1fr ;
+        /* Stack columns for smaller screens */
+    }
+
+    .gr2 {
+        grid-template-columns: 1fr  1fr;
+        /* Stack columns for smaller screens */
+    }
+    .gr3 {
+        grid-template-columns: 1fr  ;
+        /* Stack columns for smaller screens */
+    }
+    .grid {
+        grid-template-columns: 1fr  1fr;
+        /* Stack columns for smaller screens */
+    }
+    .row{
+        display: block;
+        text-align: center;
+    }
+    .cart-cards{
+        display: block !important;
+        position: unset;
+        padding: 5px;
+    }
+    .cart-container{
+        display: block !important;
+        position: unset;
+
+    }
+    .cart-card{
+        width:fit-content;
+        min-width: 80%;
+
+    }
+    .footer{
+        grid-template-columns: 1fr 1fr ;
+    }
+    .container{
+        text-align: center;
+    }
+
+}/* Initially hide the additional content by setting opacity to 0 */
